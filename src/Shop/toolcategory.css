@@ -1,0 +1,32 @@
+
+
+.body2_content {
+    position:relative;
+    align-items: center;
+    font-size: 12pt;
+    
+    font-weight: 600;
+}
+
+.tool_content {
+    position: absolute;
+    box-sizing: border-box;
+    width: 40vw;
+    top: 15vw;
+    left: 30vw;
+    padding: 0.3vw;
+    background-color: rgba(243,207,152, 0.6);
+    text-align: center;
+
+}
+
+.tool_content ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 1vw;
+}
+
+.tool_content a{
+    text-decoration: none;
+    color: rgb(51, 48, 48);
+}

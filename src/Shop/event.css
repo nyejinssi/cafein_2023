@@ -1,0 +1,75 @@
+.title_plan {
+    position: relative;
+    top: 14vw;
+    height: 10vw;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 3vw 0 3vw 0;
+    background-color: rgba(255, 192, 203, 0.425);
+    display: flex;
+    text-align: center;
+}
+
+.banner_title {
+    position: relative;
+    left: 20vw;
+    top: -2vw;
+    font-size: 2.5vw;
+}
+
+.title_content{
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.event_banner{
+    position: relative;
+}
+
+.weekly_special_banner{
+    position: absolute;
+    height: auto;
+    width:auto;
+    margin: 0;
+    padding: 0;
+    top: 16vw;
+}
+
+.event_1 {
+    position:relative;
+    left:25vw;
+    height: 20vw;
+}
+.event_2{
+    position: relative;
+    top: -20vw;
+    left: 50vw;
+    height: 20vw;
+
+}
+
+.ongoing_title {
+    position: relative;
+    top:39vw;
+    left: 40vw;
+    box-sizing: border-box;
+    font-size: 1.7vw;
+}
+
+.ongoing_special_banner{
+    position: absolute;
+}
+
+.event_3{
+    position:relative;
+    left:25.7vw;
+    top:41vw;
+    height:24vw;
+}
+
+.event_4{
+    position: relative;
+    left:50vw;
+    top:17vw;
+    height:24vw;
+}

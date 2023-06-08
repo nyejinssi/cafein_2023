@@ -1,0 +1,108 @@
+
+.body_content {
+    position: absolute;
+    align-items: center;
+    font-size: 12pt;
+    padding: 0;
+    height: auto;
+    top : 20vw;
+    left:20vw;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    border: 2px solid black;
+}
+
+.coffee_mix_choice {
+    position: relative;
+    box-sizing: border-box;
+    width: 10vw;
+    top: -1vw;
+    left: 10vw;
+    padding: 0.3vw;
+    background-color: rgba(243,207,152, 0.6);
+    text-align: center;
+    border-right: solid 1px black;
+    
+}
+
+.coffee_mix_checkbox {
+    position: relative;
+    left: 21vw;
+    top: -2.5vw;
+    padding: 0.3vw;
+    padding-left: 1vw;
+    background-color: white;
+    border: solid 1px lightslategray;
+    
+    width: 32vw;
+    margin-right: 1vw;
+}
+
+.coffee_mix_checkbox label {
+    margin-bottom: 5px; /* 간격을 조정하는 부분 */
+    margin-right: 5px;
+}
+
+.more_button {
+    position: relative;
+    width:5vw;
+    left: 5vw;
+    top: -0.8vw;
+    font-size: 0.7vw;
+    font-weight: 700;
+}
+
+.more_coffee {
+    position: relative;
+    z-index: 1;
+    display: bloxk;
+    background-color: lightgray;
+}
+
+.coffee_roasting{
+    background: white;
+}
+.coffee_fair_trade{
+    background: white;
+}
+.coffee_level {
+    background: white;
+}
+
+.coffee_apply {
+    position:relative;
+    left: 48vw;
+    font-size: 0.8vw;
+    font-weight: 800;
+}
+
+.c_apply{
+    height:2vw;
+    width: 4vw;
+    font-size: 0.9vw;
+    font-weight: 700;
+}
+.coffee_product_list {
+    position: relative;
+    left:8vw;
+}
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50vw;
+    height: 150vw;
+}
+
+.product-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}

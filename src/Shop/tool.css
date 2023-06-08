@@ -1,0 +1,49 @@
+.body3_content {
+    position: absolute;
+    align-items: center;
+    font-size: 12pt;
+    padding: 0;
+    height: auto;
+    width: auto;
+    top : 25vw;
+    left:20vw;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    border: 2px solid black;
+}
+
+.tool_content2 {
+    position: relative;
+    box-sizing: border-box;
+    width: 10vw;
+    top: -1vw;
+    left: 10vw;
+    padding: 0.3vw;
+    background-color: rgba(243,207,152, 0.6);
+    text-align: center;
+    border-right: solid 1px black;
+}
+
+.tool_checkbox {
+    position: relative;
+    left: 21vw;
+    top: -2.5vw;
+    padding: 0.3vw;
+    padding-left: 1vw;
+    background-color: white;
+    border: solid 1px lightslategray;
+    
+    width: 32vw;
+    margin-right: 1vw;
+}
+
+.tool_checkbox label{
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
