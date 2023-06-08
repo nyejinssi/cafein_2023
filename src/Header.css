@@ -46,7 +46,7 @@ img {
 .nav1 {
   position: absolute;
   right: 18vw;
-  top: 4vw;
+  top: 5vw;
   box-sizing:border-box;
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@ img {
   position: absolute;
     width: 5vw;
     right: 7.8vw;
-    top: -1vw;
+    top: 0vw;
     background-color: white;
     border: none;
     cursor: pointer;
@@ -80,7 +80,7 @@ img {
   width:10vw;
     position: absolute;
     right: 5vw;
-    top: 3.3vw;
+    top: 4.3vw;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
     display: none;
     z-index:1;
@@ -103,11 +103,9 @@ img {
   display: block;
 }
 
-.container {
-  position: absolute;
-  width: 100vh;
-  height: 100%;
-  top: 10vw;
+#container {
+  position: relative;
+  top: 9.03vw;
 }
 
 .background2{
@@ -205,3 +203,96 @@ input[type=search] {
   font-weight: bold;
   font-size: 1vw;
 }
+
+
+  
+  button.mbti_btn {
+    position: absolute;
+    top: 29vw;
+    left: 10vw;
+    width: 20vw;
+    height:5vw;
+    font-size: 2vw;
+    background-color: black;
+    color:white; 
+  }
+  
+  .guest {
+    position: absolute;
+    top:4vw;
+    right: 5vw;
+    font-size: 1vw;
+  }
+  
+  
+  /*폰트 추가 후 font-weight 지정
+  .submenu_shopping {
+  }
+  */
+  
+  
+  /* Shop 페이지 css */
+  
+  .shop_page {
+    position: relative;
+    width: auto;
+    padding-top: 70px;
+  }
+  .shop_page .nav2{
+    position: absolute;
+    top :10vw;
+    left: 33vw;
+    justify-content: space-between;
+    font-family: abster;
+  }
+  
+  .shop_page .nav2 ul li{
+    display: inline-block;
+    margin:0 2vw;
+    text-align: center;
+  }
+  
+  .nav2 ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+    font-weight: 600;
+  }
+  
+  .search {
+    position: absolute;
+    top: 13vw;
+    left: 33vw;
+    text-align: center;
+  
+  }
+  
+  input[type=search] {
+    width:600px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 60px;
+    border: 2px solid burlywood;
+    text-align: center;
+    outline: none;
+  }
+  
+  
+  .search_button {
+    position: absolute;
+    left: 500px;
+    top: 10px;
+    width: 4vw;
+    height: 2vw;
+    background-color: lightgray;
+    border: none;
+  }
+
+  .UserNickname{
+    position: absolute;
+    top:6vw;
+    left: 90vw;
+    color: gray;
+    font-weight: bold;
+    font-size: 1vw;
+  }

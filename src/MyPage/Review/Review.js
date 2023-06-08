@@ -1,33 +1,81 @@
-
-import { Link } from'react-router-dom';
-import './Review.css';
+import { useEffect, useState } from 'react';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
 import { dbService, authService } from '../../fbase';
-import { collection, query, where, onSnapshot, getDocs, deleteDoc, doc } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react';
-import ReviewListW from './ReviewListW';
+import { Link } from 'react-router-dom';
+import './Review.css';
+import Col from 'react-bootstrap/Col';
 
 const Review = () => {
   const user = authService.currentUser;
-  const [userWReview, setUserWReview] = useState([]);
+  const [confirmedProducts, setConfirmedProducts] = useState([]);
+
+  //WReview에서 정보 가져오기
   useEffect(() => {
-    const q = query(collection(dbService, 'WReview'), where('userid', '==', user.uid), where('deliveryDone', '==', true), where('ReviewWrite', '==', false));
-    onSnapshot(q, (snapshot) => {
-        const userArray = snapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setUserWReview(userArray);
-      });
-  });
-
-
+    const fetchConfirmedProducts = async () => {
+      try {
+        const wReviewCollectionRef = collection(dbService, 'WReview');
+        const querySnapshot = await getDocs(wReviewCollectionRef);
+        const confirmedProducts = [];
+        querySnapshot.forEach((doc) => {
+          const { ProductID, ProductImg, ProductName, userId } = doc.data();
+          if (userId === user.uid) {
+            confirmedProducts.push({
+              ProductID,
+              ProductImg,
+              ProductName,
+            });
+          }
+        });
+        setConfirmedProducts(confirmedProducts);
+      } catch (error) {
+        console.error('Error retrieving confirmed products:', error);
+      }
+    };
+  
+    fetchConfirmedProducts();
+  }, [user.uid]);
+  
     return (
         <>
-        <div id="myPageReview" className="col-9">
-          <h2 style={{ marginTop: "5%", marginLeft: "30%", marginBottom: "2%" }}>
-            리뷰 관리
+        <Col lg="3" md="3" sm="1" xs="1">
+            <div className="myCafeIn">
+              
+                  <Link to="/Home/*">My CafeIn</Link>
+                    <ul className="list-group list-group-flush" style={{ listStyle: "none", display:"flex" }}>
+                        <li>
+                        <Link to="/MyPage/Cart/CHome/*">장바구니</Link>
+                        </li>
+                        <hr/>
+                        <li>
+                        <Link to="/MyPage/Like/LHome/*"> 찜한 상품</Link>
+                        </li>
+                        <hr />
+                        <li>
+                        <Link to="/MyPage/Shop/ShopList/*">주문목록</Link>
+                        </li>
+                        <hr />
+                        <li>
+                        <Link to="/MyPage/Review/Review/*">리뷰관리</Link>
+                        </li>
+                        <li>
+                        <Link to="/MyPage/Review/Review/*" style={{color:'#8D5124', fontWeight:550}}>작성 가능한 리뷰</Link>
+                        </li>
+                        <li>
+                        <Link to="/Mypage/Review/RList/*" style={{ color: "#6F6F6F" }}>내가 작성한 리뷰 </Link></li>
+                        <hr/>
+                        <li>
+                          <Link to="/MyPage/Account/Home/*">계정 관리</Link>
+                          </li>
+                    </ul>
+                </div>
+                </Col> 
+        
+                <div className="myPageLike2">
+        <h2 style={{ marginTop: "5%", marginBottom: "1%", marginLeft: "1%" }}>
+            리뷰관리
           </h2>
-          <ul style={{ listStyle: "none" }}>
+
+          <ul style={{ listStyle: "none", marginTop:"2%" }}>
             <li>
               <h3
                 style={{
@@ -35,7 +83,7 @@ const Review = () => {
                   textDecoration: "none",
                   position: "relative",
                   float:"left",
-                  left:"28%"
+                  right:"3%"
                 }}
               >
                 작성 가능한 리뷰
@@ -48,9 +96,9 @@ const Review = () => {
                     fontWeight: 600,
                     textDecoration: "none",
                     color: "#6F6F6F",
-                    float:"left",
+           
                     position: "relative",
-                    left:"35%"
+                    left:"6%"
                   }}
                 >
                   내가 작성한 리뷰
@@ -58,21 +106,21 @@ const Review = () => {
               </h3>
             </li>
           </ul>
-        </div>
-
-        
-        <div className="myPageReview2" style={{ marginTop: "6%" }}>
-          <hr />
-          <div className="myPageReviewContents" id="myPageReviewedContents1">
-            {userWReview.map((R) => (
-              <ReviewListW 
-              key={R.id}
-              R = {R}
-              isOwner = {true}/>
+          <hr/>
+     
+          <form>
+            {confirmedProducts.map((product) => (
+              <div className="myPageReviewContents" id="myPageReviewedContents1" key={product.ProductID}>
+                <img src={product.ProductImg} className="ReviewimgConts" alt={product.ProductName} />
+                <p id="idConts">{product.ProductName}</p>
+                <Link to="/Mypage/Review/Write/*">
+                  <button className="writeReview"> 리뷰쓰기 </button>
+                </Link>
+              </div>
             ))}
-            
+          </form>
           </div>
-          </div>
+          
         </>
     );
 };

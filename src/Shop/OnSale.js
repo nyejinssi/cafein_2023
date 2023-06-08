@@ -93,20 +93,23 @@ const OnSale = () => {
       <div className='sale_p'>
         <div className='sale_title'>
           핫 세일!!
+          <div className="sale_title2">
+            이건 꼭 사야해!
+          </div>
         </div>
         <br/>
         <br/>
 
 
       <ul>
-        {OnSale.map((product) => (
+        {OnSale.map((product, index) => (
           <ul>
             <div className='p_id'>
             <React.Fragment key={product.Fragmentid}> {/*제품 id */}
             </React.Fragment>
             </div>
             <div className='p_name'>
-            <li>{product.title}</li> {/*제품 이름 */}
+            <li>{index + 1}. {product.title} {/* 순번과 제품 이름 출력 */}</li>
             </div>
             <div className="p_all">
 

@@ -25,7 +25,7 @@ const SignIn = () => {
         event.preventDefault();        
         try{    
                 data = signInWithEmailAndPassword(authService, email, password).then(() => {
-                    navigate('/Sign/UserInfo');
+                    navigate('/Main');
                     console.log(data); })
                 } catch(error){
                     setErrorMsg(error.message);
@@ -39,6 +39,7 @@ const SignIn = () => {
         if (name === "google"){ provider = new GoogleAuthProvider(); }
         const data = await signInWithPopup(authService, provider);
         console.log("구글 계정으로 로그인 성공");
+        navigate('/Main');
     };
 
     const onChange = (event) => {

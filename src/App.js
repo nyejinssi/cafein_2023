@@ -39,7 +39,7 @@ import Edit from './MyPage/Review/Edit';
 import ReviewListW from './MyPage/Review/ReviewListW';
 
 // ShopList
-import ShopListS from './MyPage/Shop/ShopListS';
+import ShopList from './MyPage/Shop/ShopList';
 // Shop
 // Sign
 import UserAddress from './Sign/UserAddress';
@@ -120,7 +120,7 @@ const App = () => {
               <Route path="/MyPage/Review/Write/*" element={<Write/>} />
               <Route path="/MyPage/Review/Review/*" element={<Review/>} />
               <Route path="/MyPage/Review/ReviewListW/*" element={<ReviewListW/>} />
-              <Route path="/MyPage/Shop/ShopListS/*" element={<ShopListS/>} />
+              <Route path="/MyPage/Shop/ShopList/*" element={<ShopList/>} />
               <Route path="/Sign/UserInfo/*" element={ <UserInfo/>} />
               <Route path="/Sign/UserAddress/*" element={<UserAddress/>} />
               <Route path="/Sign/SignUpDone/*" element={<SignUpDone/>} /> 

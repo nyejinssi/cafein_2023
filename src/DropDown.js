@@ -2,7 +2,8 @@ import React, { useMemo, useState, useEffect }  from 'react';
 import {DropDownList} from "@progress/kendo-react-dropdowns";
 import Dropdown from 'react-dropdown';
 import { Link } from'react-router-dom';
-import logo from './logo_3.png';
+import logo from './Sign/logo_2.jpg';
+import title_logo from './logo_3.png'
 import profile from './profile.png'
 import './Header.css';
 import { dbService, authService } from './fbase';
@@ -47,18 +48,18 @@ const DropDown = () => {
             <div className="header">
             <div className="logo">
                     {/*로고*/}
-                    <Link to="/home"><img src={logo} alt="logo" /></Link>
+                    <Link to="/home"><img src={title_logo} alt="logo" /></Link>
                 </div>
                 <Link to='/home'><span className="title">Cafe인</span></Link>
                 <span className="nav1">
                     <ul>
                         <li>
-                            <Link to="/Shop/Shop/*" style={{ fontSize: "2.2vw" }}> 
+                            <Link to="/Shop/Shop" style={{ fontSize: "1.8vw", fontWeight:"bold" }}> 
                                 쇼핑
                             </Link>
                         </li>
                         <li>
-                            <Link to="/Sign/Logout">로그아웃</Link>
+                            <Link to="/Sign/Logout" style={{ fontSize: "1.8vw", fontWeight:"bold" }}>로그아웃</Link>
                         </li>
                     </ul>
                 </span>
@@ -81,7 +82,7 @@ const DropDown = () => {
                     <div className="submenu_interest">
                         <Link to="/MyPage/Like/LHome/*" className="dropdown_contents"><li onClick={handleMenuTwo}> 찜한 상품 </li></Link>
                     </div>
-                    <Link to="/MyPage/ShopList/*" className="dropdown_contents"><li onClick={handleMenuThree}>주문목록 </li></Link>
+                    <Link to="/MyPage/Shop/ShopList/*" className="dropdown_contents"><li onClick={handleMenuThree}>주문목록 </li></Link>
                     <div className="submenu_review">
                             <Link to="/MyPage/Review/Review/*" className="dropdown_contents"><li onClick={handleMenuF} >리뷰관리</li></Link>
                             <Link to="/MyPage/Review/Review/*" className="dropdown_contents"><li onClick={handleMenuW} style={{Color:"gray"}}> 작성 가능한 리뷰 </li></Link>

@@ -17,7 +17,7 @@
     border-left: solid;
     border-right: solid;
     border-color: black;
-    font-size: 1w;
+    font-size: 1vw;
     height: 20vw;
     width: 50vw;
 }
@@ -38,7 +38,7 @@
     width: 13vw;
 }
 
-.p_name {
+.newp_name {
     width: 13vw;
 }
 

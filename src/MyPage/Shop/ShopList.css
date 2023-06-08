@@ -1,17 +1,53 @@
-.myPageOrderedBack{
-    background: rgba(192, 192, 192, 0.12);
-    border: 1px solid #F1F1F1;
-    border-radius: 17px;
-    margin-left: 25%;
-    margin-top: 2%;
+.ShopList{
+  margin-top: 15%;
+  margin-left: 20%;
+  margin-bottom: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  
+  width:65%;
+  height: 90%;
+  display: grid;
+
+  box-sizing: border-box;
+  background: rgba(192, 192, 192, 0.12);
+  border: 1px solid #F1F1F1;
+  border-radius: 17px;
 }
 
-#myPageOrdered h2{
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-top: 5%;
-    margin-bottom: 1%;
-    margin-left: 20%;
+.myPageOrdered h2{
+  margin-top: 5%;
+  margin-bottom: 1%;
+  margin-left: 1%; 
+
+}
+
+.OrderList{
+  background-color: #F1F1F1;
+  border: none;
+  padding: 5% 3%;
+  width:100%;
+  border-radius: 17px;
+  border:none;
+  display: grid;
+  grid-template-columns: 3fr 5fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.orderButtons{
+  background: #8D5124;
+    border: 1px solid #F1F1F1;
+    border-radius: 14px;
+
+    box-sizing: border-box;
+    width:7rem;
+    height: 2rem;
+    color:white;
+ 
+    border-radius: 12px;
+    font-weight: 500;
+    font-size:0.8rem;
 }
 
 .orderDate{
@@ -53,6 +89,7 @@
     background-color: #F1F1F1;
     position:relative;
     margin-bottom: 5%;
+    display: block;
 }
 
 .pagination{
@@ -68,8 +105,8 @@
 
 #imgConts{
     display: inline-block;
-    height: 50%;
-    width: 10%;
+    height: 100%;
+    width: 50%;
     margin:1% 5%;
   }
 

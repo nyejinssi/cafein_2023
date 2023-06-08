@@ -11,11 +11,21 @@
     position: relative;
     color: burlywood;
     font-weight: 700;
-    width: 100%;
-    background-color: aquamarine;
-    font-size: 1.9vw;
-    left:3vw;
-    top: 1vw;
+    width: 100vw;
+    height:7vw;
+    background-color: rgb(255,210,0);
+    color:red;
+    font-size: 3vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-top: 0.5vw;
+}
+
+.sale_title2{
+    font-size: 1vw;
+    padding-top: 0.1vw; 
+    color: orangered;
 }
 
 .sale_p ul{
