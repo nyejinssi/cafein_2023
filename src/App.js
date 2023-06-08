@@ -151,7 +151,6 @@ const App = () => {
           <Route path="/Shop/Grinder/*" element={<Grinder/>}/>
           <Route path="/Shop/Accessory/*" element={<Accessory/>}/>
           <Route path="/Shop/Drip_coffee/*" element={<Drip_coffee/>}/>
-
           <Route path="/MBTI/MBTItest/*" element={<MBTItest/>} />
           
           <Route path="/CartMaker/*" element={<CartMaker/>} />

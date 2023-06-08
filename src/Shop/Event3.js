@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import './coffee.css'
 import './event.css'
 import './event1.css'
+import searching_img from './img/search_img.png';
 
 
 
@@ -25,7 +26,7 @@ const MyForm = ({ handleChange }) => {
             onChange={handleInputChange}
             />
             <button type="button" className="search_button" id="search_button" style={{ cursor: 'pointer' }}>   
-                검색
+            <img className="searching_img" src={searching_img}></img>
             </button>
         </div>
     );

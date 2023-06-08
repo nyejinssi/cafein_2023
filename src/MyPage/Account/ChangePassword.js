@@ -37,7 +37,6 @@ const ChangePassword = () => {
             console.log(code);
             console.log(message);
         }
-
     };
 
     const onChange = (event) => {
@@ -48,17 +47,14 @@ const ChangePassword = () => {
 
       return (
         <div className="myPageAccount">
-            <h2>계정 관리</h2>
             <div className="myPageAccountBackground">
-                <h4 className="myPageAccountBackgroudTitle">비밀번호 변경</h4>
-                <p>  만약, 구글로 회원가입/로그인 하신 경우, 비밀번호 변경이 안되는 점 양해부탁드립니다. </p>
+            <h2 style={{ marginTop: "5%", marginBottom: "3%", marginLeft: "1%", fontWeight:"800" }}>비밀번호 변경</h2>
+            <p style={{fontSize:"0.8rem", marginLeft:"15%"}}>만약, 구글로 회원가입/로그인 하신 경우 <br/> 비밀번호 변경이 안되는 점 양해 부탁드립니다. </p>
                 <form onSubmit={onSubmit}>
                         <input className="inputPassword" name="prepassword" type="password" value = {Prepswd} placeholder="기존 비밀번호" onChange={onChange} required/><br/>
                         <input className="inputPassword" name="newpassword" type="password" value = {newPassword} placeholder="새 비밀번호" onChange={onChange} required/><br/>
                         <input className="inputPassword" name="passwordcheck" type="password" value = {Newpswdcheck} placeholder="새 비밀번호 확인" onChange={onChange} required/><br/>
-                        {error && <p className="error">{errorMessage[error]}</p>}
-                        <input className="passwordEdit" type="submit" value="비밀번호 변경" />     
-                        {error && <p className="error">{errorMessage[error]}</p>}
+                        <input className="passwordEdit"type="submit" value="비밀번호 변경" />              
                 </form>
             </div>
         </div>

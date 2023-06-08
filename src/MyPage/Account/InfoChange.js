@@ -2,6 +2,7 @@ import { dbService, authService } from '../../fbase';
 import React, { useEffect, useState } from 'react';
 import { getFirestore, where, doc, updateDoc, getDocs, collection, query, onSnapshot, snapshot, orderBy, serverTimestamp } from "firebase/firestore";
 import { useNavigate, Link } from 'react-router-dom';
+import './ChangeAccount.css';
 
 const InfoChange = () => {
     const user = authService.currentUser;
@@ -26,7 +27,6 @@ const InfoChange = () => {
             setUserInfo(userInfoArray);
         }); 
         console.log(userInfo);
-        console.log(user.uid);
     }, [user.uid]); 
 
     const onChange = (event) => {
@@ -64,8 +64,8 @@ const InfoChange = () => {
 
     return (
         <div>
-            <form onSubmit={onSubmit}> 
-                <input
+            <form onSubmit={onSubmit} > 
+                <input style={{marginLeft:'6%'}}
                     value={NewUsername}
                     name="usersname"
                     type="name"
@@ -73,8 +73,9 @@ const InfoChange = () => {
                     maxLength={15}
                     onChange={onChange}
                     required
+                    className="inputPassword"
                 /> <br/>
-                <input
+                <input style={{marginLeft:'6%'}}
                     value={NewUserphonenumber}
                     name="usersphonenumber"
                     type="tel"
@@ -82,11 +83,13 @@ const InfoChange = () => {
                     maxLength={11}
                     onChange={onChange}
                     required
+                    className="inputPassword"
                 /> <br/>
-                <input type="submit" value=" 다음 " required/><br/>
-            </form>
-            <Link to="../../Main"><button>취소</button></Link>
-        </div>
+                <div style={{marginLeft:"70%"}}>
+                <input type="submit" className="InfoChangeButton" value=" 다음 " style={{left:"55%"}} required />
+                <Link to="../../Main"><button className="InfoChangeButton" >취소</button></Link>
+                </div>
+    </form></div>
     );      
 };
 

@@ -8,6 +8,7 @@ import event3 from './img/event3.jpg'
 import event4 from './img/event4.jpg'
 import './coffee.css'
 import './event.css'
+import searching_img from './img/search_img.png';
 
 
 const MyForm = ({ handleChange }) => {
@@ -29,7 +30,7 @@ const MyForm = ({ handleChange }) => {
             onChange={handleInputChange}
             />
             <button type="button" className="search_button" id="search_button" style={{ cursor: 'pointer' }}>   
-                검색
+            <img className="searching_img" src={searching_img}></img>
             </button>
         </div>
     );

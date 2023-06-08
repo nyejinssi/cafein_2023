@@ -120,7 +120,6 @@ const Review = () => {
             ))}
           </form>
           </div>
-          
         </>
     );
 };

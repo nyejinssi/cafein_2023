@@ -159,7 +159,7 @@ const CHome = () => {
         <li>
         <p id="idConts">{userCartItem.ProductName} <br /></p></li>
         <li><input type="number" className="quantityConts" min={0} defaultValue={userCartItem.countNumber}/></li>
-        <li className="amountConts">
+        <li className="amountConts" >
         {userCartItem.ProductPrice} <br /></li>
         <button name="delete" className="allDelete" onClick={() => handleDelete(userCartItem.id)}> 삭제 </button>
         </ul>
@@ -175,7 +175,7 @@ const CHome = () => {
             <td>(Cafe인은 전 상품 배송비 무료)</td>
             </tr>
             <tr>
-            <td style={{fontWeight:"600", color:"blue" }}>{userPrice}</td>
+            <td style={{fontWeight:"600", color:"#0071E3" }}>{userPrice}</td>
             </tr>
   </tbody>
   </table>

@@ -105,12 +105,12 @@ const NewProduct = () => {
             {nearestProductsIsBean1.map((product, index) => (
               <li key={product.id}>
                 {String(index + 1).padStart(2, '0')} {/* 순번을 01 형식으로 출력 */}
-                <div className='p_id'>
+                <div className='newp_id'>
                   {/* 제품 id */}
                 </div>
-                <div className='p_all'>
+                <div className='newp_all'>
                   <input type="image" className="newp_img" src={product.img} alt={product.title} /> {/* 제품 사진 */}
-                  <div className='p_name'>
+                  <div className='newp_name'>
                     [원산지][원두]
                     <p>{product.title}</p> {/* 제품 이름 */}
                   </div>
@@ -129,12 +129,12 @@ const NewProduct = () => {
               {nearestProductsIsBean0.map((product, index) => (
                 <li key={product.id}>
                   {String(index + 1).padStart(2, '0')} {/* 순번을 01 형식으로 출력 */}
-                  <div className='p_id'>
+                  <div className='newp_id'>
                     {/* 제품 id */}
                   </div>
-                  <div className='p_all'>
+                  <div className='newp_all'>
                     <input type="image" className="newp_img" src={product.img} alt={product.title} /> {/* 제품 사진 */}
-                    <div className='p_name'>
+                    <div className='newp_name'>
                       [원산지][원두]
                       <p>{product.title}</p> {/* 제품 이름 */}
                     </div>

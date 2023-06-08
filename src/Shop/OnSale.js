@@ -3,6 +3,8 @@ import { collection, getDocs } from 'firebase/firestore';
 import { dbService } from '../fbase';
 import { Link } from 'react-router-dom';
 import './onsale.css'
+import searching_img from './img/search_img.png';
+import sale_slogan from './img/sale_slogan2.png';
 
 const MyForm = ({ handleChange }) => {
   const [inputValue, setInputValue] = useState('');
@@ -22,7 +24,7 @@ const MyForm = ({ handleChange }) => {
           onChange={handleInputChange}
           />
           <button type="button" className="search_button" id="search_button" style={{ cursor: 'pointer' }}>   
-              검색
+            <img className="searching_img" src={searching_img}></img>
           </button>
       </div>
   );
@@ -92,10 +94,8 @@ const OnSale = () => {
 
       <div className='sale_p'>
         <div className='sale_title'>
-          핫 세일!!
-          <div className="sale_title2">
-            이건 꼭 사야해!
-          </div>
+          <img id='slogan_img' src={sale_slogan}></img>
+          
         </div>
         <br/>
         <br/>

@@ -39,18 +39,21 @@ const Home = () => {
                 </Col> 
 
             <div className='myPageAccount' style={{marginTop:"15%"}}>
-                <h2>계정 관리</h2>
-                <div className="myPageAccountBackground" style={{paddingLeft: "10%"}}>
+                <div className="myPageAccountHomeBackground">
+                <h2 style={{ marginTop: "5%", marginBottom: "1%", marginLeft: "1%" }}>
+            계정관리
+          </h2>
                     <table style={{width:"100%"}}>
                         <tr>
                         <td>
-                            <h4 className='AccountTitle'>계정 정보</h4>
+                            <h5 className='AccountTitle'>계정 정보</h5>
                             <Link to="/MyPage/Account/ChangeAccount/*"> <button className='myPageAccountMNprofileButton'>수정</button></Link> {/*link 오류 */} 
                         </td></tr>
                         <tr>
-                            <td><h4 className='AccountTitle'>비밀번호</h4>
+                            <td><h5 className='AccountTitle'>비밀번호</h5>
                             <Link to="/MyPage/Account/ChangePassword/*"><button className='myPageAccountMNprofileButton'>변경</button></Link></td>
                         </tr>
+                        
                     </table>
                 </div>
             </div>

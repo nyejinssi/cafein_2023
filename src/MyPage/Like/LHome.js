@@ -75,6 +75,7 @@ const LHome = () => {
           <hr/>
         {userLike.map((L) => (
           <div key={L.id} L={L} style={{display:'grid', gridTemplateColumns:'2fr 3fr 1fr 1fr', alignItems:'center'}} >
+            <a href={`/Shop/ProductDetail/${L.id}`}/>
               <img src={L.ProductImg} className="LikeimgConts"/>
               <div className="LikeidConts">{L.ProductName}</div>
               <div className="LikePriceConts">{L.ProductPrice}</div>

@@ -12,21 +12,19 @@
     color: burlywood;
     font-weight: 700;
     width: 100vw;
-    height:7vw;
-    background-color: rgb(255,210,0);
-    color:red;
-    font-size: 3vw;
+    height:10vw;
+    top: -1vw;
+    background-color: white;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    padding-top: 0.5vw;
 }
 
-.sale_title2{
-    font-size: 1vw;
-    padding-top: 0.1vw; 
-    color: orangered;
+#slogan_img {
+    width: 100vw;
+
 }
+
 
 .sale_p ul{
     list-style: none;
