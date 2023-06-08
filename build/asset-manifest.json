@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/cafein_2023/static/css/main.4852c125.css",
-    "main.js": "/cafein_2023/static/js/main.3eb1188a.js",
+    "main.css": "/cafein_2023/static/css/main.4bf9eb72.css",
+    "main.js": "/cafein_2023/static/js/main.af279cb0.js",
+    "static/media/background2.png": "/cafein_2023/static/media/background2.40ca518fcd70cd1fa361.png",
     "static/media/image-6.jpg": "/cafein_2023/static/media/image-6.97665a86413c47692394.jpg",
     "static/media/image-1.jpg": "/cafein_2023/static/media/image-1.b28624fb6bbdb18e7041.jpg",
     "static/media/image-16.jpg": "/cafein_2023/static/media/image-16.ab9febe4ecbb42b3ddc6.jpg",
@@ -51,11 +52,11 @@
     "static/media/event4.jpg": "/cafein_2023/static/media/event4.f8c5f7be6ddf59e42361.jpg",
     "static/media/event1.jpg": "/cafein_2023/static/media/event1.283996cdb1dc09268dfd.jpg",
     "index.html": "/cafein_2023/index.html",
-    "main.4852c125.css.map": "/cafein_2023/static/css/main.4852c125.css.map",
-    "main.3eb1188a.js.map": "/cafein_2023/static/js/main.3eb1188a.js.map"
+    "main.4bf9eb72.css.map": "/cafein_2023/static/css/main.4bf9eb72.css.map",
+    "main.af279cb0.js.map": "/cafein_2023/static/js/main.af279cb0.js.map"
   },
   "entrypoints": [
-    "static/css/main.4852c125.css",
-    "static/js/main.3eb1188a.js"
+    "static/css/main.4bf9eb72.css",
+    "static/js/main.af279cb0.js"
   ]
 }

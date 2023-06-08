@@ -19,13 +19,13 @@ const SignIn = () => {
     const [errorMsg, setErrorMsg] = useState("");
     const [word, setWord] = useState("");
     const [User, setUser] = useState(null);
-    const data = useState("");
 
+    const data = useState("");
     const onSubmit = (event) => {
         event.preventDefault();        
         try{    
-                signInWithEmailAndPassword(authService, email, password).then(() => {
-                    navigate('/Main');
+                data = signInWithEmailAndPassword(authService, email, password).then(() => {
+                    navigate('/Sign/UserInfo');
                     console.log(data); })
                 } catch(error){
                     setErrorMsg(error.message);
@@ -37,10 +37,8 @@ const SignIn = () => {
         const { target: {name},} = event;
         let provider;
         if (name === "google"){ provider = new GoogleAuthProvider(); }
-        signInWithPopup(authService, provider).then(() =>{
-            console.log("구글 계정으로 로그인 성공");
-            navigate('/Main');
-        })
+        const data = await signInWithPopup(authService, provider);
+        console.log("구글 계정으로 로그인 성공");
     };
 
     const onChange = (event) => {
@@ -49,11 +47,6 @@ const SignIn = () => {
             setEmail(value);
         } else if(name === "password"){
                 setPassword(value);
-                if (value.length < 8 || value.length > 16){
-                    setErrorMsg("비밀번호는 8자 이상 16자 이하입니다.");
-                } else if ((value.length >= 8) || (value.length <= 16)) {
-                    setErrorMsg("");
-            }
     }};       
 
         return (
@@ -70,10 +63,9 @@ const SignIn = () => {
                     <form onSubmit={onSubmit}>
                         <input name="email" type="text" className='LoginEmail' placeholder="Email" required value={email} onChange={onChange} />
                         <input name="password"  className='LoginPassword' type="password" placeholder="Password" required value={password} onChange={onChange} />
-                        {errorMsg && <p className="error">{errorMsg}</p>}
                         <input type="submit" className = 'AuthSubmit' value="로그인" />
                     </form>
-                    {errorMessage && <p className="error-message" style={{color:"red"}}> 아이디 혹은 비밀번호가 잘못되었습니다.<br/> 확인 후 다시 입력해주세요. </p>}
+                    {errorMessage && <p className="error-message"> 아이디 혹은 비밀번호가 잘못되었습니다.<br/> 확인후 다시 입력해주세요. </p>}
                         <img className='G-SingIn' src={GoogleLogin} onClick={onSocialClick} name="google" alt="구글로 로그인" />
                 </div>
             </>

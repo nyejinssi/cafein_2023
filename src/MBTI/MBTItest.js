@@ -6,7 +6,7 @@ import './animation.css';
 import './mbti_result.css';
 
 
-const Mbtitest = () => {
+const MBTItest = () => {
   const [qIdx, setQIdx] = useState(0);
   const [mbtiSelect, setMbtiSelect] = useState([...Array(27)].map(() => 0));
 
@@ -142,7 +142,7 @@ const Mbtitest = () => {
 
   return (
     <>
-      <div className="container pb-5 mx-auto" style={{marginTop:"20%"}}>
+      <div className="container pb-5 mx-auto" style={{marginTop:"15%"}}>
         <section id="mbti_main" className="mx-auto">
           <h3 className="p-5">'내가 좋아하는 원두'를 잘 모르겠는 당신!</h3>
           <h3 className="pt-2 pb-5" style={{ textAlign: 'end' }}>
@@ -156,10 +156,12 @@ const Mbtitest = () => {
             type="button"
             className="btn btn-secondary btn-lg"
             style={{
+              backgroundColor: '#EAD8AA',
               display: 'block',
               margin: 'auto',
               marginTop: 50,
-              marginBottom: 10
+              marginBottom: 10,
+              border:"none"
             }}
             onClick={begin}
           >
@@ -167,10 +169,10 @@ const Mbtitest = () => {
           </button>
         </section>
         <section id="mbti_qna">
-          <div className="status mx-auto mt-5">
+          <div className="status mx-auto mt-8">
             <div className="statusBar" />
           </div>
-          <div className="qBox my-5 py-3 mx-auto" />
+          <div className="qBox my-5 py-3 mx-auto" style={{backgroundColor: '#EAD8AA', fontWeight:"600"}} />
           <div className="answerBox mx-auto">
             <div className="row row-cols-1 row-cols-md-2 g-2">
               <div className="col">
@@ -199,7 +201,7 @@ const Mbtitest = () => {
             style={{
               textAlign: 'left',
               paddingLeft: 0,
-              fontSize: 25,
+              fontSize: "2rem",
               fontWeight: 800
             }}
           >
@@ -210,14 +212,14 @@ const Mbtitest = () => {
             style={{
               paddingTop: 20,
               paddingBottom: 20,
-              fontSize: 25,
+              fontSize: "1.3rem",
               fontWeight: 600
             }}
           ></div>
           <div
             id="resultImage"
-            className="col-lg-4 col-md-6 col-sm-8 col-12 mx auto"
-            style={{ float: 'right', right: 100, top: 100 }}
+            className="col-3 mx auto"
+            style={{ float: 'right'}}
           ></div>
           <div
             className="resultFlavor"
@@ -226,15 +228,9 @@ const Mbtitest = () => {
           <div
             className="resultDesc"
             style={{
-              bottom: 20,
-              left: 30,
-              width: 500,
-              marginTop: 0,
-              paddingTop: 0,
-              borderTopWidth: 20
             }}
           ></div>
-          <button type="button" style={{ bottom: 20, marginTop: 20 }}>
+          <button type="button" className="btn btn-secondary btn-lg buyMBTI"  style={{ bottom: 20, marginTop: 20, backgroundColor:'#EAD8AA', border:'none', color:'black' }}>
             구매하러 가기
           </button>
         </section>
@@ -243,4 +239,4 @@ const Mbtitest = () => {
   );
 }
 
-export default Mbtitest;
+export default MBTItest;

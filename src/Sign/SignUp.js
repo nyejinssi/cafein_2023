@@ -19,7 +19,6 @@ const SignUp = () => {
     const [errorMsg, setErrorMsg] = useState("");
     const [word, setWord] = useState("");
     const [User, setUser] = useState(null);
-    
     const data = useState("");
     const onSubmit = (event) => {
         event.preventDefault();
@@ -28,7 +27,7 @@ const SignUp = () => {
         }
         try {
             setErrorMsg("");
-            createUserWithEmailAndPassword(authService, email, password).then(() => {
+            data = createUserWithEmailAndPassword(authService, email, password).then(() => {
                 sendEmailVerification(authService, email);
                 setEmail("");
                 setPassword("");
@@ -62,7 +61,7 @@ const SignUp = () => {
         if (name === "google"){ 
             provider = new GoogleAuthProvider(); 
         }
-        await signInWithPopup(authService, provider).then(() => {
+        const data = await signInWithPopup(authService, provider).then(() => {
             console.log("구글로 회원가입 하기를 선택하셨습니다.");
             navigate('../Sign/UserInfo');
         });

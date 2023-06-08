@@ -44,7 +44,6 @@ import ShopListS from './MyPage/Shop/ShopListS';
 // Sign
 import UserAddress from './Sign/UserAddress';
 import UserInfo from './Sign/UserInfo';
-import Auth from './Sign/Auth';
 import Logout from './Sign/Logout';
 import SignUpDone from './Sign/SignUpDone';
 import SignIn from './Sign/SignIn';
@@ -130,15 +129,15 @@ const App = () => {
             </>
           ):(
             <>
-              <Route path="/Sign/Auth/*" element={<Auth/>} />
+              <Route path="/Sign/SignUp/*" element={<SignUp/>} />
+              <Route path="/Sign/SignIn/*" element={<SignIn/>} />
             </>
           )
           }
           <Route path="/*" element={<Main />} />
           <Route path="/Tmp" element={<Tmp/>} />
 
-          <Route path="/Sign/SignUp/*" element={<SignUp/>} />
-          <Route path="/Sign/SignIn/*" element={<SignIn/>} />
+          
           <Route path="/Shop/Shop/*" element={<Shop/>}/>
           <Route path="/Shop/NewProduct/*" element={<NewProduct/>}/>
           <Route path="/Shop/Event0/*" element={<Event0/>}/>

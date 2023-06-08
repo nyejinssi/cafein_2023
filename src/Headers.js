@@ -1,6 +1,4 @@
 import { Link } from'react-router-dom';
-import Auth from './Sign/Auth';
-import Shop from './Shop/Shop';
 import logo from './logo_3.png';
 import {React, useState} from 'react';
 import './Header.css';
@@ -18,9 +16,7 @@ export default function Header() {
               <span className="nav1">
                   <ul>
                       <li>
-                          <Link to="/Shop/Shop" style={{ fontSize: "2.2vw" }}> 
-                              쇼핑
-                          </Link>
+                          <Link to="/Shop/Shop" style={{ fontSize: "2.2vw" }}>  쇼핑 </Link>
                       </li>
                       <li>
                           <Link to="/Sign/SignIn">로그인</Link>

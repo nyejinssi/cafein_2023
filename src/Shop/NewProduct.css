@@ -1,0 +1,74 @@
+.popular {
+    position: absolute;
+    margin: 10%;
+    left: 17%;
+    top: 10vw;
+}
+
+.pop_coffee {
+    font-size: 2vw;
+}
+
+.pop_coffee_content {
+    position: absolute;
+    box-sizing: border-box;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: black;
+    font-size: 1w;
+    height: 20vw;
+    width: 50vw;
+}
+
+.pop_coffee_content ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+    align-items: center;
+}
+
+.pop_coffee_content ul li {
+    list-style: none;
+}
+
+.newp_img {
+    height: 13vw;
+    width: 13vw;
+}
+
+.p_name {
+    width: 13vw;
+}
+
+
+.pop_tool {
+    position: absolute;
+    top: 25vw;
+    font-size: 2vw;
+}
+
+.pop_tool_content {
+    position: absolute;
+    box-sizing: border-box;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: black;
+    top: 28vw;
+    font-size: 1vw;
+    height: 20vw;
+    width: 50vw;
+}
+
+.pop_tool_content ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.pop_tool_content ul li {
+    list-style: none;
+}
